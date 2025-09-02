@@ -1,0 +1,42 @@
+# Cursor Project Rules (.cursorrules)
+
+## Goals
+- Treat this repo as a general‑purpose workspace template.
+- Optimize for clarity, reproducibility, and minimal surprise edits.
+
+## Style & Formatting
+- Preserve existing indentation (tabs vs spaces) and width.
+- Avoid sweeping reformatting outside the requested scope.
+- Prefer minimal, surgical edits; leave unrelated code/text untouched.
+- For long outputs, write to files in `examples/` or `playbooks/` and then summarize in chat.
+
+## Communication
+- Write concise, skimmable responses. Use headings and short bullet points.
+- Use backticks for file/dir/function names and markdown links for URLs.
+- When showing code from the repo, cite with the file path snippet style.
+- Use neutral, professional tone; avoid hype.
+
+## Safety & Compliance
+- Do not include credentials or sensitive data in files.
+- Respect website terms/robots.txt and API rate limits. Prefer official APIs.
+- Add citations for factual claims when possible.
+
+## Agent Behavior
+- Propose a plan before large, multi‑file edits.
+- Confirm assumptions; prefer tooling/search over guessing.
+- Default to Ask Mode for discovery, Agent Mode for execution, Manual for precise fixes.
+- Write non‑interactive scripts and instructions for scheduled tasks.
+
+## File Organization
+- Prompts → `prompts/`
+- Playbooks → `playbooks/`
+- Examples & templates → `examples/`
+- Data outputs (user‑specific) → encourage `data/` and `out/` folders (gitignored by users).
+
+## Deliverables
+- Provide both: (1) the artifact file(s) and (2) a short summary.
+- For email/content templates, include placeholders and brief usage notes.
+
+## Limitations
+- Do not run long‑running background jobs inside Cursor; provide OS scheduling instructions.
+- Avoid scraping that violates terms; offer compliant alternatives.

@@ -1,0 +1,197 @@
+# Cursor Super Prompt Agent Configuration Template
+# Copy this file and customize it for your specific agent
+
+# Agent Identity
+agent:
+  name: "My Custom Agent"
+  type: "custom"  # gig_finder, content_creator, market_research, custom
+  version: "1.0.0"
+  description: "Brief description of what this agent does"
+  author: "Your Name"
+  created_date: "2024-01-01"
+
+# Operational Settings
+operational:
+  mode: "automatic"  # automatic, semi-automatic, manual
+  log_level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  max_runtime: "2h"  # Maximum execution time
+  retry_attempts: 3  # Number of retry attempts on failure
+  timeout: "30m"  # Timeout for individual operations
+
+# Scheduling Configuration
+schedule:
+  enabled: true
+  frequency: "daily"  # hourly, daily, weekly, monthly
+  preferred_time: "09:00"  # HH:MM format
+  timezone: "America/New_York"  # Your timezone
+  days_of_week: ["monday", "tuesday", "wednesday", "thursday", "friday"]
+  retry_on_failure: true
+  max_daily_runs: 5
+
+# Notification Settings
+notifications:
+  enabled: true
+  email:
+    enabled: false
+    address: "your@email.com"
+    smtp_server: "smtp.gmail.com"
+    smtp_port: 587
+    use_tls: true
+    username: "your_username"
+    password: "your_password"  # Use environment variables in production
+  slack:
+    enabled: false
+    webhook_url: "https://hooks.slack.com/services/YOUR/SLACK/WEBHOOK"
+    channel: "#agent-notifications"
+  desktop:
+    enabled: true
+    success_notifications: true
+    error_notifications: true
+    summary_notifications: true
+
+# Directory Paths
+paths:
+  base_dir: "./my_agents/my_custom_agent"
+  logs_dir: "./logs"
+  output_dir: "./output"
+  data_dir: "./data"
+  config_dir: "./config"
+  temp_dir: "./temp"
+
+# Data Management
+data:
+  auto_backup: true
+  backup_frequency: "daily"
+  retention_days: 30
+  compression: true
+  encryption: false
+  max_file_size: "100MB"
+
+# Integration Settings
+integrations:
+  # Email Integration
+  email:
+    enabled: false
+    provider: "gmail"  # gmail, outlook, custom
+    client_id: ""
+    client_secret: ""
+    refresh_token: ""
+
+  # API Integrations
+  apis:
+    enabled: false
+    endpoints: []
+    rate_limits: []
+    authentication: []
+
+  # Web Scraping
+  scraping:
+    enabled: false
+    user_agent: "Cursor Agent/1.0"
+    delay_between_requests: 2  # seconds
+    max_concurrent_requests: 5
+    respect_robots_txt: true
+
+  # Database Connections
+  database:
+    enabled: false
+    type: "sqlite"  # sqlite, postgresql, mysql
+    host: "localhost"
+    port: 5432
+    database: "agent_db"
+    username: ""
+    password: ""
+
+# Performance Settings
+performance:
+  memory_limit: "512MB"
+  cpu_limit: "50%"
+  network_timeout: "30s"
+  concurrent_operations: 3
+  batch_size: 100
+
+# Security Settings
+security:
+  encryption_enabled: false
+  encryption_key: ""  # Generate a strong key
+  api_key_rotation: "monthly"
+  audit_logging: true
+  access_control: "owner_only"  # owner_only, group, public
+
+# Monitoring & Analytics
+monitoring:
+  enabled: true
+  metrics_collection: true
+  performance_tracking: true
+  error_reporting: true
+  health_checks: true
+  dashboard_enabled: false
+
+# Customization Variables
+customization:
+  # Agent-specific variables
+  variables:
+    user_name: "Your Name"
+    company_name: "Your Company"
+    domain: "yourdomain.com"
+    industry: "technology"
+
+  # Output preferences
+  output:
+    format: "markdown"  # markdown, html, pdf, json
+    include_timestamps: true
+    include_metadata: true
+    compression: false
+
+  # Processing preferences
+  processing:
+    language: "en"
+    region: "us"
+    content_filtering: true
+    quality_threshold: 0.8
+
+# Advanced Settings
+advanced:
+  experimental_features: false
+  debug_mode: false
+  verbose_logging: false
+  performance_profiling: false
+
+  # Custom headers for HTTP requests
+  http_headers:
+    User-Agent: "Cursor Super Prompt Agent/1.0"
+    Accept: "application/json, text/html, */*"
+    Accept-Language: "en-US,en;q=0.9"
+
+  # Environment variables
+  environment_variables:
+    API_KEY: ""
+    DATABASE_URL: ""
+    EMAIL_PASSWORD: ""
+
+# Backup & Recovery
+backup:
+  enabled: true
+  frequency: "daily"
+  retention: "30d"
+  location: "./backups"
+  include_logs: true
+  include_data: true
+  compression: true
+  encryption: false
+
+# Update Settings
+updates:
+  auto_update: false
+  update_channel: "stable"  # stable, beta, nightly
+  update_check_frequency: "weekly"
+  backup_before_update: true
+
+# Troubleshooting
+troubleshooting:
+  debug_logging: false
+  performance_monitoring: true
+  error_screenshots: false
+  log_rotation: "daily"
+  max_log_size: "10MB"
+  log_retention: "30d"
