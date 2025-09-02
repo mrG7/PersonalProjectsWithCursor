@@ -44,6 +44,22 @@ cursor --orchestrator multi_agent_orchestrator --agents 5
 
 ## 🎯 **Working Implementations - Try It Now!**
 
+### **Course/Lecture Manager** 🎓
+**Status: ✅ Minimal Runnable Example**
+```bash
+# Navigate to the example
+cd examples/course_manager
+
+# Install minimal dependencies
+pip install -r requirements.txt
+
+# Create a demo course and print summary
+python -m src.main
+
+# Output syllabus as JSON
+python -m src.main --list
+```
+
 ### **Sales Lead Generator** 🤝
 **Status: ✅ Fully Functional & Tested**
 ```bash

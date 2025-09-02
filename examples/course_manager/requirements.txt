@@ -1,0 +1,4 @@
+# Minimal requirements for the course manager example
+aiofiles==23.2.1
+aiohttp==3.9.5
+
